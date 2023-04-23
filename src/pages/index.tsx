@@ -65,7 +65,8 @@ export default function Home() {
         windRef.current!.innerHTML = `${parseInt(json.wind.speed)}Km/h`
 
         weatherBoxRef.current!.className = "fadeIn flex-col item-center justify-center"
-        containerRef.current!.style.height = "35rem"
+        weatherDetailsRef.current!.className = "fadeIn flex justify-between"
+        containerRef.current!.style.height = "30rem"
       })
   }
 
@@ -87,18 +88,18 @@ export default function Home() {
             <p className="description text-center text-gray text-lg" ref={descriptionRef}></p>
         </div>
         <div className="weather-details" ref={weatherDetailsRef}>
-            <div className="humidity" ref={humidityRef}>
-                <BsWater/>
+            <div className="humidity flex items-center w-1/2 h-24 justify-start">
+                <BsWater className="text-primary text-4xl mr-4"/>
                 <div className="text">
-                    <span></span>
-                    <p>Humidity</p>
+                    <span className="text-3xl font-bold" ref={humidityRef}></span>
+                    <p className="text-gray leading-3">Humidity</p>
                 </div>
             </div>
-            <div className="wind" ref={windRef}>
-                <FiWind/>
+            <div className="wind flex items-center w-1/2 h-24 justify-end">
+                <FiWind className="text-primary text-4xl mr-4"/>
                 <div className="text">
-                    <span></span>
-                    <p>Wind Speed</p>
+                    <span className="text-3xl font-bold" ref={windRef}></span>
+                    <p className="text-gray leading-3">Wind Speed</p>
                 </div>
             </div>
         </div>
