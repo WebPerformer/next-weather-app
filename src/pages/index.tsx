@@ -64,8 +64,8 @@ export default function Home() {
         humidityRef.current!.innerHTML = `${json.main.humidity}%`
         windRef.current!.innerHTML = `${parseInt(json.wind.speed)}Km/h`
 
-        weatherBoxRef.current!.className = "fadeIn flex-col item-center justify-center"
-        weatherDetailsRef.current!.className = "fadeIn flex justify-between"
+        weatherBoxRef.current!.className = "flex-col item-center justify-center"
+        weatherDetailsRef.current!.className = "flex justify-between"
         containerRef.current!.style.height = "30rem"
       })
   }
