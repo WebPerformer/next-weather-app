@@ -70,11 +70,17 @@ export default function Home() {
       })
   }
 
+  const handleEnter = (event: any) => {
+    if(event.key === "Enter"){
+      handleClick()
+    }
+  }
+
   return (
     <div className="container relative w-400 h-110 bg-darkless px-7 py-8 overflow-hidden rounded-2xl transition-all ease-out duration-500" ref={containerRef}>
         <div className="search-box w-full h-min flex items-center justify-between">
             <FaMapMarkerAlt className="absolute text-primary text-2xl"/>
-            <input type="text" onChange={handleChange} value={city} placeholder="Enter your location" className="w-[80%] text-2xl font-medium uppercase outline-none pl-8 bg-darkless placeholder:text-xl placeholder:text-light placeholder:capitalize"/>
+            <input type="text" onChange={handleChange} onKeyDown={(e) => handleEnter(e)} value={city} placeholder="Enter your location" className="w-[80%] text-2xl font-medium uppercase outline-none pl-8 bg-darkless placeholder:text-xl placeholder:text-light placeholder:capitalize"/>
             <button onClick={handleClick} className="group w-50 h-50 flex items-center justify-center bg-primary-opacity-50 rounded-[50%] transition-all ease-out cursor-pointer hover:bg-primary"><BiSearch className="text-xl text-primary transition-all ease-out group-hover:text-light"/></button>
         </div>
         <div className="not-found hidden scale-0 opacity-0" ref={error404Ref}>
