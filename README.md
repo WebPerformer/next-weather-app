@@ -4,7 +4,7 @@ Weather App
 
 ## Weather App
 
-**Efeito de distorção quando passamos o mouse por cima da imagem**
+**Aplicativo para mostrar em tempo real o clima**
 
 ## Features Usadas
 **Next.js** - **Compontents** - **Hooks** - **HTML** - **CSS** - **OpenWeather** - **Figma**
